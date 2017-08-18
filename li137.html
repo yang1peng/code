@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+<script type="text/javascript">
+var s="";
+for(var i=1;i<=16;i++){
+	s=s+'<div id="i'+i+'"style="position:absolute;left:0px;top:0px;background-color:#0066FF;border:'+"0.1px"+''+"solid"+''+"#0066FF"+'"></div>';
+	}
+	document.write(s);
+	var speed=30;
+	var temp=new Array();
+	var Height=document.body.clientHeight,Top=0;
+	for(var i=1;i<=16;i++){
+		temp[i]=eval("document.all.i"+i+".style");
+		temp[i].width=document.body.clientWidth/16;
+		temp[i].height=document.body.clientHeight;
+		temp[i].left=(i-1)*parseInt(temp[i].width);
+		}
+function kind(){
+		Height-=speed;
+		for(var i=1;i<=16;i=i+2){
+			temp[i].clip="rect(0 auto+"+Height+"0)";
+			}
+		Top+=speed;
+		for(var i=2;i<=16;i=i+2){
+			temp[i].clip="rect("+Top+"auto auto auto)";
+			}
+			if(Height<=0)
+			clearInterval(tim);
+			}
+			tim=setInterval("kind()",100)
+			</script>
+<body>
+
+</body>
+</html>

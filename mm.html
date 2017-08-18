@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+  <p>{{ message }}</p>
+</div>
+
+<div id="app-2">
+  <span v-bind:title="message">
+    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+  </span>
+</div>
+
+<div id="app-3">
+  <p v-if="seen">现在你看到我了</p>
+</div>
+
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">逆转消息</button>
+</div>
+
+<div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+
+<template v-if="loginType === 'username'">
+  <label>Username</label>
+  <input placeholder="Enter your username">
+</template>
+<template v-else>
+  <label>Email</label>
+  <input placeholder="Enter your email address">
+</template>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue.js!this is my first vue,js'
+  }
+})
+
+var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    message: '页面加载于 ' + new Date()
+  }
+})
+
+var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    seen: true
+  }
+})
+
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'Hello Vue.js!'
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
+    }
+  }
+})
+
+var app6 = new Vue({
+  el: '#app-6',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+</script>
+</body>
+</html>

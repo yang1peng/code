@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<script type="text/javascript">
+var col=new Array("#FFFFFF","#00FFFF","#FF00FF","#FFFF00","#0000FF","#FF0000","#00FF00");
+var p='<div id="rearDiv"style="position:absolute;top:0px;left:0px">'
+var n=0;
+for(var i=0;i<14;i++){
+	n++;
+	if(n==(col.length-1))
+	n=0;
+	p=p+'<div style="position:relative;width:1px;height:1px;background:'+col[i]+';font-size:3px"></div>';
+	}
+	p=p+"</div>";
+	document.write(p);
+	var Clrs=new Array("#FFFFFF","#00FFFF","#FF00FF","#FFFF00","#0000FF","#FF0000","#00FF00");
+	var sClrs=new Array("#FFFFFF","#00FFFF","#FF00FF","#FFFF00")
+	var peepY;
+	var peepX;
+	var step=5;
+	var tallyStep=0;
+	var backColor="#FFA000";
+	var Mtop=250;
+	var Mleft=250;
+	function dissilient(){
+		peepY=window.document.body.clientHeight/3;
+		peepY=window.document.body.clientWidth/8;
+		enlarge();
+		T=setTimeout("dissilient()",20):
+		}
+	function enlarge(){
+		for(var i=0;i<rearDiv.all.length;i++){
+			
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+<script type="text/javascript">
+function onmovein(v){
+	if(v=="a")
+		a.style.fontWeight="Bold";
+	if(v=="b")
+		b.style.fontStyle="Italic";
+	if(v=="c")
+		c.style.textDecoration="underline";
+	if(v=="d")
+		d.style.textDecoration="line-through";
+	if(v=="e")
+		e.style.fontWeight="Italic";
+		e.style.fontStyle="Italic";
+	}
+function onmoveout(){
+	a.style.fontWeight="normal";
+	b.style.fontStyle="normal";
+	c.style.textDecoration="none";
+	d.style.textDecoration="none";
+	e.style.fontStyle="normal";
+	e.style.fontWeight="normal";
+	}
+	
+</script>
+
+<body vlink="#FF3300"bgcolor="#CCFFFF">
+<a href="#"name="a"onmousemove="onmovein('a');"onmouseout="onmoveout();">用户注册</a>
+<a href="#"name="b"onmousemove="onmovein('b');"onmouseout="onmoveout();">用户登陆</a>
+<a href="#"name="c"onmousemove="onmovein('c');"onmouseout="onmoveout();">查看留言</a>
+<a href="#"name="d"onmousemove="onmovein('d');"onmouseout="onmoveout();"onlick="window.location.reload();">刷新页面</a>
+<a href="#"name="e"onmousemove="onmovein('e');"onmouseout="onmoveout();">版主登陆</a>
+</body>
+</html>

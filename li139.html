@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<script type="text/javascript">
+var x,y;
+function handlerMM(){
+	x=window.event.x+document.body.clientLeft;
+	y=window.event.y+document.body.clientTop;
+	}
+	function makesnake(){
+		if(document.all){
+		var ob=document.all("tdiv");
+		ob.style.posLeft=x;
+		ob.style.posTop=y;
+		}
+		var timer=setTimeout("makesnake()",10);
+		}
+		document.onmousemove=handlerMM;
+		</script>
+</body>
+<body onload="makesnake()"background="file:///C|/Users/Public/Pictures/Sample Pictures/Chrysanthemum.jpg">
+<div id="tdiv"style='position:absolute'>
+<img src='file:///C|/Users/Public/Pictures/Sample Pictures/Lighthouse.jpg'width="32"height="32"class="spanstyle" />
+</div>
+</html>
